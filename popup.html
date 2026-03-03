@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask LLM! Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      padding: 20px;
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: LightYellow;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    .select-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .select-container label {
+      margin-bottom: 0;
+      margin-right: 10px;
+      flex: 0 0 auto;
+    }
+
+    .select-container select {
+      flex: 1;
+    }
+
+    .advanced-toggle {
+      cursor: pointer;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      color: #363833;
+    }
+
+    .advanced-toggle::before {
+      content: '▶';
+      display: inline-block;
+      margin-right: 5px;
+      transition: transform 0.3s;
+      color: #363833;
+    }
+
+    .advanced-toggle.open::before {
+      transform: rotate(90deg);
+    }
+
+    .advanced-settings {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .advanced-settings.open {
+      max-height: 500px;
+    }
+
+    .color-options {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .color-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .color-swatch {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      margin-top: 5px;
+    }
+
+    f .flags {
+      display: flex;
+      gap: 5px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .flag {
+      transition: transform 0.2s;
+    }
+
+    .flag:hover {
+      transform: scale(1.3);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ask LLM!<img src="icons/icon48.png" /></h1>
+
+  <div class="api-key-toggle advanced-toggle">🤗 Access Token (<b style="color: red;">Free</b> <a
+      href="https://huggingface.co/settings/tokens" target="_blank">here</a>)</div>
+  <div class="api-key-settings advanced-settings">
+    <input type="text" id="apiKey" placeholder="Enter 🤗 Access Token...">
+  </div>
+
+  <div class="advanced-toggle">Advanced Settings</div>
+  <div class="advanced-settings">
+    <div class="select-container">
+      <label for="model">Model:</label>
+      <select id="model">
+        <option value="moonshotai/Kimi-K2-Instruct-0905:groq" selected>Kimi K2</option>
+        <option value="openai/gpt-oss-120b:groq">OpenAI OSS-120b</option>
+        <option value="openai/gpt-oss-20b:groq">OpenAI OSS-20b</option>
+      </select>
+    </div>
+
+    <div class="select-container">
+      <div class="flags">
+        <span class="flag" data-prompt="What is" data-system="Reply in English in at most 3 sentences"
+          title="UK">🇬🇧</span>
+        <span class="flag" data-prompt="咩野係" data-system="Reply in Cantonese in at most 3 sentences"
+          title="HK">🇭🇰</span>
+        <span class="flag" data-prompt="什麼是" data-system="Reply in Traditional Chinese in at most 3 sentences"
+          title="TW">🇹🇼</span>
+        <span class="flag" data-prompt="什么是" data-system="Reply in Simplified Chinese in at most 3 sentences"
+          title="CN">🇨🇳</span>
+        <span class="flag" data-prompt="무엇입니까" data-system="Reply in Korean in at most 3 sentences"
+          title="KR">🇰🇷</span>
+        <span class="flag" data-prompt="とは" data-system="Reply in Japanese in at most 3 sentences"
+          title="JP">🇯🇵</span>
+        <span class="flag" data-prompt="Qué es" data-system="Reply in Spanish in at most 3 sentences"
+          title="ES">🇪🇸</span>
+        <span class="flag" data-prompt="Apa itu" data-system="Reply in Indonesian in at most 3 sentences"
+          title="ID">🇮🇩</span>
+        <span class="flag" data-prompt="Ano ang" data-system="Reply in Filipino in at most 3 sentences"
+          title="PH">🇵🇭</span>
+        <span class="flag" data-prompt="คืออะไร" data-system="Reply in Thai in at most 3 sentences"
+          title="TH">🇹🇭</span>
+      </div>
+    </div>
+    <input type="text" id="promptText" placeholder="What is">
+    <label for="systemMessage">System Message:</label>
+    <input type="text" id="systemMessage" placeholder="Reply in at most 3 sentences">
+  </div>
+
+  <div style="margin-top:50px">
+    <h2>Made by
+      <a href="https://www.d24h.hk/" target="_blank">
+        <img src="icons/D24H.png" style="width:110px;" />
+      </a>
+    </h2>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

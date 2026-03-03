@@ -1,0 +1,172 @@
+#askLlama-tooltip {
+  all: initial;
+  position: fixed;
+  background-color: LightYellow;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  width: 500px;
+  min-height: 200px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+#askLlama-tooltip * {
+  all: unset;
+  box-sizing: border-box;
+}
+
+#askLlama-tooltip .drag-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: move;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#askLlama-tooltip .prompt-container {
+  position: relative;
+  margin-bottom: 5px;
+  display: block;
+  overflow: hidden;
+}
+
+#askLlama-tooltip #prompt-input {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-bottom: 2px;
+  display: block;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#askLlama-tooltip #input-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 0.1s;
+  display: block;
+  max-width: 100%;
+}
+
+#askLlama-tooltip #result {
+  margin-top: 5px;
+  display: block;
+  color: black;
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+#askLlama-tooltip a {
+  color: #0000EE;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#askLlama-tooltip a:hover {
+  text-decoration: none;
+}
+
+#askLlama-tooltip a:visited {
+  color: #551A8B;
+}
+
+#askLlama-tooltip #result p {
+  margin: 0 0 10px 0;
+  display: block;
+}
+
+#askLlama-tooltip #result code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+#askLlama-tooltip #result pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 10px 0;
+}
+
+#askLlama-tooltip #result pre code {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+}
+
+#askLlama-tooltip #result blockquote {
+  border-left: 4px solid #ccc;
+  margin: 0 0 10px 0;
+  padding-left: 10px;
+  color: #666;
+}
+
+#askLlama-tooltip #result ul, #askLlama-tooltip #result ol {
+  padding-left: 20px;
+  margin: 0 0 10px 0;
+  display: block;
+}
+
+#askLlama-tooltip #result li {
+  display: list-item;
+  margin-bottom: 5px;
+}
+
+#askLlama-tooltip #result h1, #askLlama-tooltip #result h2, #askLlama-tooltip #result h3, 
+#askLlama-tooltip #result h4, #askLlama-tooltip #result h5, #askLlama-tooltip #result h6 {
+  margin: 15px 0 10px 0;
+  font-weight: bold;
+}
+
+#askLlama-tooltip #result h1 { font-size: 1.6em; }
+#askLlama-tooltip #result h2 { font-size: 1.4em; }
+#askLlama-tooltip #result h3 { font-size: 1.2em; }
+#askLlama-tooltip #result h4 { font-size: 1.1em; }
+#askLlama-tooltip #result h5 { font-size: 1em; }
+#askLlama-tooltip #result h6 { font-size: 0.9em; }
+
+#askLlama-tooltip #brandingAppName {
+  font-weight: bold;
+}
+
+#askLlama-tooltip hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+#askLlama-tooltip #result table {
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+#askLlama-tooltip #result th, #askLlama-tooltip #result td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+#askLlama-tooltip #result th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+

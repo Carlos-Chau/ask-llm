@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "Ask LLM",
+  "version": "0.1",
+  "description": "Mouse-3 (scroll-wheel click) to Ask LLM",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabCapture",
+    "audioCapture"
+  ],
+  "host_permissions": [
+    "https://router.huggingface.co/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "libs/marked.min.js",
+        "call-hf.js",
+        "content.js"
+      ],
+      "css": [
+        "tooltip.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*",
+        "libs/marked.min.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
