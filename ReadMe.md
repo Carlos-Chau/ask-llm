@@ -1,6 +1,7 @@
 # Ask-LLM Chrome Extension
-This extension allows user to ask LLM by 1-mouse-click (🖱️ scroll-wheel button). 
-LLM is served by 🤗 HuggingFace Inference Provider. 
+This extension allows user to ask LLM by 1-click on mouse3 button (scroll-wheel) 🖱️ 
+
+LLM is served by HuggingFace Inference Provider  🤗
 
 ## Demo
 (demo.gif)
@@ -13,5 +14,7 @@ LLM is served by 🤗 HuggingFace Inference Provider.
 
 ## Version History
 
-**2025 Jan** Access to Groq now requires US-VPN
-**2025 Nov** Switch Groq -> HuggingFace Inference Provider
+| Date | Event |
+| :--- | :--- |
+| 2025 Jan | Access to Groq now requires US-VPN |
+| 2025 Nov | Switch Groq -> HuggingFace Inference Provider |
