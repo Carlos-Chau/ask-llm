@@ -1,7 +1,6 @@
 # Ask-LLM Chrome Extension
-This extension allows user to ask LLM by 1-click on mouse3 button (scroll-wheel) 🖱️ 
-
-LLM is served by HuggingFace Inference Provider  🤗
+- Ask LLM by 1-click on mouse3 (scroll-wheel) button 🖱️ 
+- LLM is served by HuggingFace Inference Provider  🤗
 
 ## Demo
 ![demo.gif](demo.gif)
