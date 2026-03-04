@@ -4,7 +4,7 @@ This extension allows user to ask LLM by 1-click on mouse3 button (scroll-wheel)
 LLM is served by HuggingFace Inference Provider  🤗
 
 ## Demo
-!![demo.gif](demo.gif)
+![demo.gif](demo.gif)
 
 ## How-to-install
 - **Manage Extension**: Settings >> Extensions >> Manage Extension
